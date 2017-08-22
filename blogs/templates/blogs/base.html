@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+	{% load static %}
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>{% block Titulo %}{% endblock %}</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="{% static 'blogs/vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+	
+    <!-- Custom styles for this template -->
+    <link href="{% static 'blogs/css/modern-business.css' %}" rel="stylesheet">
+	
+	    <!-- Bootstrap core JavaScript -->
+    <script src="{% static 'blogs/vendor/jquery/jquery.min.js' %}"></script>
+    <script src="{% static 'blogs/vendor/popper/popper.min.js' %}"></script>
+    <script src="{% static 'blogs/vendor/bootstrap/js/bootstrap.min.js' %}"></script>
+	
+	
+	{% block Agregaciones %}
+	
+	{% endblock %}
+	{% block JavaScript %}
+	
+	{% endblock %}
+		<script type="text/javascript">
+		
+		function changeClass()
+		{
+			document.getElementById(clase).className += " active";
+		}
+	 
+		window.onload = function()
+		{
+		   changeClass();
+		}
+	</script>
+	
+</head>
+
+<body>
+	 <!-- Cabecera-->
+    <!-- Navigation -->
+    <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <a class="navbar-brand" href="/blogs/index.html">Start Bootstrap</a>
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav ml-auto">
+				<li onload="changeClass()" id="NewBlog" class="nav-item">
+					<a class="nav-link" href="/blogs/new_blog.html">New Blog</a>
+				</li>
+				<li onload="changeClass()" id="About" class="nav-item">
+					<a class="nav-link" href="/blogs/about.html">About</a>
+				</li>
+				<li id="Services" class="nav-item">
+					<a class="nav-link" href="/blogs/services.html">Services</a>
+				</li>
+				<li id="Contact" class="nav-item">
+					<a class="nav-link" href="/blogs/contact.html">Contact</a>
+				</li>
+				<li id="Portfolio" class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="#" id="navbarDropdownPortfolio" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+								Portfolio
+						</a>
+						<div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownPortfolio">
+							<a id="P1" class="dropdown-item" href="/blogs/portfolio-1-col.html">1 Column Portfolio</a>
+							<a id="P2" class="dropdown-item" href="/blogs/portfolio-2-col.html">2 Column Portfolio</a>
+							<a id="P3" class="dropdown-item" href="/blogs/portfolio-3-col.html">3 Column Portfolio</a>
+							<a id="P4" class="dropdown-item" href="/blogs/portfolio-4-col.html">4 Column Portfolio</a>
+							<a id="Pitem" class="dropdown-item" href="/blogs/portfolio-item.html">Single Portfolio Item</a>
+						</div>
+					</li>
+				<li id="Blog" class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="#" id="navbarDropdownBlog" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+								Blog
+							</a>
+						<div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownBlog">
+							<a id="B1" class="dropdown-item" href="/blogs/blog-home-1.html">Blog Home 1</a>
+							<a id="B2" class="dropdown-item" href="/blogs/blog-home-2.html">Blog Home 2</a>
+							<a id="B3" class="dropdown-item" href="/blogs/blog-post.html">Blog Post</a>
+						</div>
+				</li>
+
+				<li id="Other" class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="#" id="navbarDropdownBlog" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Other Pages
+                        </a>
+						<div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownBlog">
+							<a id="O1" class="dropdown-item" href="/blogs/full-width.html">Full Width Page</a>
+							<a id="O2" class="dropdown-item" href="/blogs/sidebar.html">Sidebar Page</a>
+							<a id="O3" class="dropdown-item" href="/blogs/faq.html">FAQ</a>
+							<a id="O4" class="dropdown-item" href="/blogs/404.html">404</a>
+							<a id="O5" class="dropdown-item" href="/blogs/pricing.html">Pricing Table</a>
+						</div>
+				</li>
+            </ul>
+        </div>
+    </nav>
+	 <!-- fin Cabecera-->
+	 <!-- Contenido-->
+    {% block Contenido %}
+	
+	{% endblock %}
+	
+
+	
+
+	
+    <!-- /.container -->
+	 <!-- Fin del contenido-->
+    <!-- Footer -->
+    <footer class="py-5 bg-dark">
+        <div class="container">
+            <p class="m-0 text-center text-white">Copyright &copy; Your Website 2017</p>
+        </div>
+        <!-- /.container -->
+    </footer>
+	<!-- Fin Footer -->
+
+
+
+</body>
+
+</html>

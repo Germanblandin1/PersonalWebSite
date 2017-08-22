@@ -1,0 +1,15 @@
+{% extends "blogs/base.html" %}
+
+{% block Titulo %} {{titulo}} {% endblock %}
+{% block Contenido %}
+
+  <h1> hola aqui puedes crear un blog</h1>
+  <div class="col-lg-12">
+	  <form method="POST" enctype="multipart/form-data">
+		{% csrf_token %}
+		{{form.as_p}}
+		<button type="submit" class="btn btn-primary">Enviame</button>
+	  </form>
+  </div>
+
+{% endblock %}
